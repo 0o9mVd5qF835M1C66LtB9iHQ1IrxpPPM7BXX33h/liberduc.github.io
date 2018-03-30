@@ -1,2 +1,2 @@
-# liberduc.github.io
+# Libertarian Education
 Repositório sobre libertarianismo
