@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	let urlBase = 'http://localhost/git/hub/liberduc/';
+	let urlBase = 'https://liberduc.github.io/';
 	let dataPost = $('body').attr('data-post');
 	let dataTag = $('body').attr('data-tag');
 	let postsFileJson = urlBase+'src/js/posts.json';
