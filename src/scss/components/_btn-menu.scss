@@ -1,0 +1,17 @@
+.menu{
+	margin: 5px 0;
+	.btn-menu{
+		margin: 2px;
+		display: inline-block;
+		padding: 5px 10px;
+		color: #fff;
+		background-color: $color-gray;
+		border: 2px solid transparent;
+
+		&:hover{
+			background-color: transparent;
+			border-color: $color-gray;
+			color: $color-gray;
+		}
+	}
+}

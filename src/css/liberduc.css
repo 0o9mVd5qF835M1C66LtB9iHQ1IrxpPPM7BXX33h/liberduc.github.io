@@ -1,0 +1,195 @@
+/* Color */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #303030; }
+
+a {
+  text-decoration: none;
+  color: #0068B2; }
+  a:hover {
+    color: #002F51FF; }
+  a:visited {
+    color: #004A7F; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.jc-center {
+  justify-content: center; }
+
+.jc-between {
+  justify-content: space-between; }
+
+.h1 {
+  font-size: 1.5em; }
+
+.underline {
+  text-decoration: underline; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.navbar {
+  background-color: #DDDDDD;
+  width: 100%;
+  heigth: auto;
+  padding: 10px; }
+  .navbar h1 {
+    display: inline; }
+  .navbar .menu {
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer; }
+  .navbar a {
+    text-decoration: none;
+    color: #303030; }
+
+.menu-icon {
+  vertical-align: middle;
+  display: inline-block;
+  margin: auto 10px auto 5px;
+  cursor: pointer; }
+  .menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #404040;
+    border-radius: 3px; }
+
+.menu {
+  margin: 5px 0; }
+  .menu .btn-menu {
+    margin: 2px;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #404040;
+    border: 2px solid transparent; }
+    .menu .btn-menu:hover {
+      background-color: transparent;
+      border-color: #404040;
+      color: #404040; }
+
+.content-box {
+  width: 100%;
+  margin: 10px 0; }
+  .content-box .itens, .content-box #articles {
+    display: flex;
+    flex-wrap: wrap; }
+    .content-box .itens a, .content-box #articles a {
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+      background-color: #DDDDDD;
+      max-width: 120px;
+      width: auto;
+      height: auto;
+      color: #303030;
+      border: 2px solid transparent;
+      word-wrap: break-word;
+      text-align: center;
+      vertical-align: middle; }
+      .content-box .itens a:hover, .content-box #articles a:hover {
+        border-color: #606060; }
+
+.post {
+  padding: 0 10px; }
+  .post .post-info, .post .autor-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px auto; }
+  .post .info, .post .tag {
+    background-color: #DDDDDD;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px; }
+    .post .info a, .post .tag a {
+      padding: 5px; }
+  .post header {
+    margin: 30px 0 20px 0; }
+    @media (min-width: 900px) {
+      .post header {
+        font-size: 1.6em; } }
+  .post article {
+    font-family: 'Merriweather', 'Times New Roman', 'Lucida Bright';
+    color: #606060;
+    margin: 20px auto;
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 1000px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    line-height: 1.25; }
+    .post article p {
+      margin: 0 0 15px 0; }
+    .post article blockquote {
+      font-style: italic;
+      border-left: 5px solid #DDDDDD;
+      padding: 10px; }
+    .post article a {
+      text-decoration: underline; }
+  .post .tags {
+    margin: 20px auto 40px auto; }
+
+/*# sourceMappingURL=liberduc.css.map */

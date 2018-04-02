@@ -1,0 +1,19 @@
+{
+	"post3":{
+		"title":"Seja o primeiro a fazer um post!",
+		"url":"../fazer-parte.html",
+		"infoPost":{
+			"Autor":"Desconhecido",
+			"Data":"Desconhecida"
+		},
+		"infoAutor":{
+			"E-mail":"liberduc@hotmail.com"
+		},
+		"tags":{
+			"Todos os posts":"todos-os-posts"
+		},
+		"content":[
+			"<p>Em breve novidades!</p>"
+		]
+	}
+}
