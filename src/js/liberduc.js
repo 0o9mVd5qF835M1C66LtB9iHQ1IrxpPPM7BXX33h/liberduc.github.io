@@ -1,13 +1,18 @@
 $(document).ready(function(){
 	let urlBase = 'https://liberduc.github.io/';
+	// let urlBase = 'http://localhost/git/hub/liberduc/';
 	let dataPost = $('body').attr('data-post');
 	let dataTag = $('body').attr('data-tag');
+	let dataColab = $('body').attr('data-colab');
 	let postsFileJson = urlBase+'src/js/posts.json';
-	console.log(postsFileJson);
+	let equipeFileJson = urlBase+'src/js/equipe.json';
+	// console.log(postsFileJson);
 	let path = {
-		posts: urlBase+'post/',
-		tags: urlBase+'tags/'
+		posts: urlBase+'posts/',
+		tags: urlBase+'tags/',
+		equipe: urlBase+'equipe/'
 	}
+
 
 	$('.menu-icon').click(function(){
 		$('nav.menu').toggle('fast');
@@ -16,6 +21,42 @@ $(document).ready(function(){
 	$(document).on('click', '.menu-icon.active', function(){
 		$('nav.menu').addClass('hide');
 	});
+
+	if(dataColab != undefined){
+		dataColab = 'colab'+dataColab;
+		$.getJSON(equipeFileJson, function(itens){			
+			let itemColab = itens[dataColab];
+			$('title').html('Liberduc | '+itemColab.Nome);
+			$('.post header').html('<h1><smal>Liberduc | </smal>'+itemColab.Nome+'</h1>');
+			
+			let colabInfo = '';
+			if(itemColab.Email != undefined){
+				colabInfo += '<span class="info"><em>'+itemColab.Email+'</em></span>';
+			}
+			if(itemColab.Facebook != undefined){
+				colabInfo += '<span class="info"><a href="https://fb.com/'+itemColab.Facebook+'" target="_blanc"><em>Facebook</em></a></span>';
+			}
+			if(itemColab.Whatsapp != undefined){
+				colabInfo += '<span class="info"><em>'+itemColab.Whatsapp+'</em></span>';
+			}
+
+			colabInfo += '';
+			$('.post .post-info').html(colabInfo);
+
+			$.getJSON(postsFileJson, function(itens){			
+				let tags = '';
+				$.each(itens, function(k,itemPost){
+					if(itemPost.infoPost.Autor === itemColab.Nome){
+						let href = path.posts+itemPost.url;
+						tags += '<a href="'+href+'" title="'+itemPost.title+'">'+itemPost.title+'</a>';
+					}
+				});
+				$('.posts-by-colab').html(tags);
+			});
+			
+		});
+		
+	}
 	
 	if(dataTag != undefined){
 
@@ -37,7 +78,7 @@ $(document).ready(function(){
 		$.getJSON(postsFileJson, function(itens){
 			let tags = '';
 			$.each(itens, function(k, item){
-				tags += '<a href="'+urlBase+'article/'+item.url+'" title="'+item.title+'">'+item.title+'</a>';
+				tags += '<a href="'+path.posts+item.url+'" title="'+item.title+'">'+item.title+'</a>';
 			});
 			$('#articles').html(tags);
 		});
@@ -62,9 +103,19 @@ $(document).ready(function(){
 
 			let postInfo = '';
 			$.each(infoPost, function(k, ip){
-				postInfo += '<span class="info">';
-				postInfo += '<span>'+k+': <em>'+ip+'</em></span>';
-				postInfo += '</span>';
+				if(k === 'Autor'){
+					let href = ip.toLowerCase().replace(' ', '-');
+					console.log(href);
+					postInfo += '<span class="info">';
+					postInfo += '<span>'+k+':<a href="'+path.equipe+href+exe+'"><em>'+ip+'</em></a></span>';
+					postInfo += '</span>';	
+				}
+				else{
+					postInfo += '<span class="info">';
+					postInfo += '<span>'+k+': <em>'+ip+'</em></span>';
+					postInfo += '</span>';	
+				}
+				
 				// postInfo += '';
 			});
 
@@ -85,7 +136,7 @@ $(document).ready(function(){
 			$('title').html('Liberduc | '+title);
 			$('.post header').html('<h1>'+title+'</h1>');
 			$('.post-info').html(postInfo);
-			$('.content-post').html(content+autorInfo);
+			$('.content-post').html(content);
 			$('.tags').html('<em>Tags: </em>'+tagsLink);
 
 			// let next = 'post'+(parseInt(dataPost)+1);

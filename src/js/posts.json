@@ -1,19 +1,16 @@
 {
 	"post3":{
-		"title":"Seja o primeiro a fazer um post!",
-		"url":"../fazer-parte.html",
+		"title":"Asrmas ",
+		"url":"modelo.html",
 		"infoPost":{
-			"Autor":"Desconhecido",
-			"Data":"Desconhecida"
-		},
-		"infoAutor":{
-			"E-mail":"liberduc@hotmail.com"
+			"Autor":"Kelvys Moura",
+			"Data":"04/04/2018"
 		},
 		"tags":{
 			"Todos os posts":"todos-os-posts"
 		},
 		"content":[
-			"<p>Em breve novidades!</p>"
+			"<p>Em breve novidades! 2</p>"
 		]
 	}
 }
