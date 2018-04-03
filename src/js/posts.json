@@ -1,16 +1,16 @@
 {
 	"post3":{
-		"title":"Asrmas ",
-		"url":"modelo.html",
+		"title":"Seja o primeira a fazer um post!",
+		"url":"../fazer-part.html",
 		"infoPost":{
-			"Autor":"Kelvys Moura",
-			"Data":"04/04/2018"
+			"Autor":"Desconhecido",
+			"Data":"Desconhecida"
 		},
 		"tags":{
 			"Todos os posts":"todos-os-posts"
 		},
 		"content":[
-			"<p>Em breve novidades! 2</p>"
+			"<p>Em breve novidades!</p>"
 		]
 	}
 }

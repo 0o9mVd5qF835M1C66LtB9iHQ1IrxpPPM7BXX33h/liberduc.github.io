@@ -6,7 +6,7 @@ $(document).ready(function(){
 	let dataColab = $('body').attr('data-colab');
 	let postsFileJson = urlBase+'src/js/posts.json';
 	let equipeFileJson = urlBase+'src/js/equipe.json';
-	// console.log(postsFileJson);
+
 	let path = {
 		posts: urlBase+'posts/',
 		tags: urlBase+'tags/',
@@ -88,7 +88,6 @@ $(document).ready(function(){
 		$.getJSON(postsFileJson, function(itens){
 			let i = 'post'+dataPost;
 			let item = itens[i];
-			console.log(item, i);
 			let title = item.title;
 			let tags = item.tags;
 			let infoPost = item.infoPost;
@@ -105,7 +104,6 @@ $(document).ready(function(){
 			$.each(infoPost, function(k, ip){
 				if(k === 'Autor'){
 					let href = ip.toLowerCase().replace(' ', '-');
-					console.log(href);
 					postInfo += '<span class="info">';
 					postInfo += '<span>'+k+':<a href="'+path.equipe+href+exe+'"><em>'+ip+'</em></a></span>';
 					postInfo += '</span>';	
@@ -115,8 +113,6 @@ $(document).ready(function(){
 					postInfo += '<span>'+k+': <em>'+ip+'</em></span>';
 					postInfo += '</span>';	
 				}
-				
-				// postInfo += '';
 			});
 
 			let autorInfo = '';
