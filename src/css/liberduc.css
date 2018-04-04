@@ -33,6 +33,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent; }
 
 body {
+  font-size: 1.2em;
   line-height: 1; }
 
 ol, ul {
@@ -78,7 +79,7 @@ table {
   justify-content: space-between; }
 
 .h1 {
-  font-size: 1.5em; }
+  font-size: 1.3em; }
 
 .underline {
   text-decoration: underline; }
@@ -161,7 +162,7 @@ table {
     margin: 5px auto; }
   .post .info, .post .tag {
     background-color: #DDDDDD;
-    padding: 5px;
+    padding: 8px;
     border-radius: 3px;
     display: inline-block;
     margin: 5px; }
@@ -179,17 +180,18 @@ table {
     text-align: justify;
     text-justify: inter-word;
     max-width: 1000px;
-    font-size: 1.2em;
     letter-spacing: 1px;
-    line-height: 1.25; }
+    line-height: 1.3; }
     .post article p {
+      font-size: 1.1em;
       margin: 0 0 15px 0; }
-    .post article a {
-      text-decoration: underline; }
+      .post article p a {
+        text-decoration: underline; }
   .post .tags {
     margin: 10px auto; }
 
 blockquote {
+  font-size: 1.1em;
   font-style: italic;
   border-left: 5px solid #DDDDDD;
   padding: 10px;

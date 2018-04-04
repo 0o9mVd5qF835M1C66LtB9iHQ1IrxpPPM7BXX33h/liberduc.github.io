@@ -3,14 +3,38 @@
 		"title":"Seja o primeira a fazer um post!",
 		"url":"modelo.html",
 		"infoPost":{
-			"Autor":"Desconhecido",
+			"Autor":"modelo",
 			"Data":"Desconhecida"
 		},
 		"tags":{
-			"Todos os posts":"todos-os-posts"
+			"Todos os posts":"todos-os-posts",
+			"Politica":"Politica",
+			"Testes":"Teste"
 		},
 		"content":[
-			"<p>Conteudo do post aqui!</p>" 
+			"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+			"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+			"<p><blockquote>Conteudo do post aqui!</blockquote></p>",
+			"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
+			"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+		],
+		"RefPost":"undefined"
+	},
+	"post2":{
+		"title":"Seja o primeira a fazer um post! 2",
+		"url":"modelo.html",
+		"infoPost":{
+			"Autor":"Desconhecido 2",
+			"Data":"Desconhecida 2"
+		},
+		"tags":{
+			"Todos os posts":"todos-os-posts",
+			"Armas":"armas",
+			"Monopolios":"monopolios",
+			"Teste de fidelidade":"teste-de-fidelidade"
+		},
+		"content":[
+			"<p><blockquote>Conteudo do post aqui!</blockquote></p>" 
 		],
 		"RefPost":"undefined"
 	}

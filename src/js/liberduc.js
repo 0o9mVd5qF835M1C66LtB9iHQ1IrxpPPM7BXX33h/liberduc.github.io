@@ -4,10 +4,11 @@ $(document).ready(function(){
 	let urlBase = 'http://localhost/git/hub/liberduc/';
 	let dataPost = $('body').attr('data-post');
 	let dataTag = $('body').attr('data-tag');
-	let dataAllTag = $('body').attr('data-all-tags');
+	let dataAllTags = $('body').attr('data-all-tags');
 	let dataColab = $('body').attr('data-colab');
 	let postsFileJson = urlBase+'src/js/posts.json';
 	let equipeFileJson = urlBase+'src/js/equipe.json';
+	let exe = '.html';
 
 	let path = {
 		posts: urlBase+'posts/',
@@ -29,7 +30,7 @@ $(document).ready(function(){
 		$.getJSON(equipeFileJson, function(itens){			
 			let itemColab = itens[dataColab];
 			$('title').html('Liberduc | '+itemColab.Nome);
-			$('.post header').html('<h1><smal>Liberduc | </smal>'+itemColab.Nome+'</h1>');
+			$('.post header').html('<h1><smalL>Liberduc | </smalL>'+itemColab.Nome+'</h1>');
 			
 			let colabInfo = '';
 			if(itemColab.Email != undefined){
@@ -48,6 +49,7 @@ $(document).ready(function(){
 			$.getJSON(postsFileJson, function(itens){			
 				let tags = '';
 				$.each(itens, function(k,itemPost){
+					console.log(itemPost.infoPost.Autor, itemColab.Nome);
 					if(itemPost.infoPost.Autor === itemColab.Nome){
 						let href = path.posts+itemPost.url;
 						tags += '<a href="'+href+'" title="'+itemPost.title+'">'+itemPost.title+'</a>';
@@ -79,16 +81,19 @@ $(document).ready(function(){
 
 		$.getJSON(postsFileJson, function(itens){			
 			let tags = '';
+			let objTags = {};
 			$.each(itens, function(k,item){
 				$.each(item.tags, function(i,v){
-					if(v === dataTag){
-						let href = path.posts+item.url;
-						tags += '<a href="'+href+'" title="'+item.title+'">'+item.title+'</a>';
+					if($.inArray(i, objTags) === -1){
+						objTags[i] = v;
 					}
 				});
 			});
-			console.log(itens);
-			$('.posts-by-tags').html(tags);
+			
+			$.each(objTags, function(k, v){
+				tags += '<a class="tag" href="'+path.tags+v+exe+'">'+k+'</a>';
+			});
+			$('#all-tags').html(tags);
 		});
 	}
 
@@ -111,7 +116,6 @@ $(document).ready(function(){
 			let infoPost = item.infoPost;
 			let refPost = item.RefPost;
 			let content = item.content.join('');
-			let exe = '.html';
 			let tagsLink = '';
 			for(var k in tags){
 				let href = path.tags+tags[k]+exe;
