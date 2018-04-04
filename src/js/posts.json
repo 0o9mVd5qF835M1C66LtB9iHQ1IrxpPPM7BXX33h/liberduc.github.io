@@ -10,7 +10,8 @@
 			"Todos os posts":"todos-os-posts"
 		},
 		"content":[
-			"<p>Em breve novidades!</p>"
-		]
+			"<p>Conteudo do post aqui!</p>" 
+		],
+		"RefPost":"undefined"
 	}
 }
