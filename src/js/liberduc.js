@@ -1,8 +1,9 @@
 $(document).ready(function(){
-	let urlBase = 'https://liberduc.github.io/';
-	// let urlBase = 'http://localhost/git/hub/liberduc/';
+	// let urlBase = 'https://liberduc.github.io/';
+	let urlBase = 'http://localhost/git/hub/liberduc/';
 	let dataPost = $('body').attr('data-post');
 	let dataTag = $('body').attr('data-tag');
+	let dataAllTag = $('body').attr('data-all-tags');
 	let dataColab = $('body').attr('data-colab');
 	let postsFileJson = urlBase+'src/js/posts.json';
 	let equipeFileJson = urlBase+'src/js/equipe.json';
@@ -73,6 +74,22 @@ $(document).ready(function(){
 			$('.posts-by-tags').html(tags);
 		});
 	}
+	if(dataAllTags != undefined){
+
+		$.getJSON(postsFileJson, function(itens){			
+			let tags = '';
+			$.each(itens, function(k,item){
+				$.each(item.tags, function(i,v){
+					if(v === dataTag){
+						let href = path.posts+item.url;
+						tags += '<a href="'+href+'" title="'+item.title+'">'+item.title+'</a>';
+					}
+				});
+			});
+			console.log(itens);
+			$('.posts-by-tags').html(tags);
+		});
+	}
 
 	if(dataPost == undefined){
 		$.getJSON(postsFileJson, function(itens){
@@ -91,7 +108,7 @@ $(document).ready(function(){
 			let title = item.title;
 			let tags = item.tags;
 			let infoPost = item.infoPost;
-			let infoAutor = item.infoAutor;
+			let refPost = item.RefPost;
 			let content = item.content.join('');
 			let exe = '.html';
 			let tagsLink = '';
@@ -115,29 +132,22 @@ $(document).ready(function(){
 				}
 			});
 
-			let autorInfo = '';
-			$.each(infoAutor, function(k, ia){
-				autorInfo += '<span class="info">';
-				if(k == 'Facebook'){
-					let href = 'https://fb.com/'+ia;
-					autorInfo += '<span><a href="'+href+'" target="_blanc">'+k+'</a></span>';
-				}
-				else{
-					autorInfo += '<span>'+k+': <em>'+ia+'</em></span>';
-				}
-				autorInfo += '</span>';
-			});
-
-			autorInfo = '<div class="autor-info jc-center">'+autorInfo+'</div';
+			let refLinks = '';
+			if(refPost != "undefined" && refPost != undefined){
+				console.log(refPost);
+				$.each(refPost, function(k, rp){
+					refLinks += '<h4><a href="'+rp+'" target="_blanc">'+k+'</a></h4><br>';
+				});	
+				refLinks = "<hr><br><div><h3>Referências</h3><br>"+refLinks+"</div><br><br>";
+			}
+			
+			tagsLink = '<br><hr><div class="tags"><em></em>'+tagsLink+'</div>';
 			$('title').html('Liberduc | '+title);
 			$('.post header').html('<h1>'+title+'</h1>');
 			$('.post-info').html(postInfo);
-			$('.content-post').html(content);
-			$('.tags').html('<em>Tags: </em>'+tagsLink);
-
-			// let next = 'post'+(parseInt(dataPost)+1);
-			// console.log(itens[next].title);
-			// alert('Proximo post: '+itens[next].title);
+			$('.content-post').html(content+tagsLink+refLinks);
+			// $('.post footer').html(ref);
+			// $('.tags').html();
 		});
 	}
 });
