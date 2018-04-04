@@ -147,11 +147,10 @@ $(document).ready(function(){
 			
 			tagsLink = '<br><hr><div class="tags"><em></em>'+tagsLink+'</div>';
 			$('title').html('Liberduc | '+title);
+			$('#page-title').html('<small>'+title+'</small>');
 			$('.post header').html('<h1>'+title+'</h1>');
 			$('.post-info').html(postInfo);
 			$('.content-post').html(content+tagsLink+refLinks);
-			// $('.post footer').html(ref);
-			// $('.tags').html();
 		});
 	}
 });
