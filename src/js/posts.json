@@ -1,7 +1,7 @@
 {
 	"post3":{
 		"title":"Seja o primeira a fazer um post!",
-		"url":"../fazer-parte.html",
+		"url":"modelo.html",
 		"infoPost":{
 			"Autor":"Desconhecido",
 			"Data":"Desconhecida"
@@ -10,7 +10,8 @@
 			"Todos os posts":"todos-os-posts"
 		},
 		"content":[
-			"<p>Em breve novidades!</p>"
-		]
+			"<p>Conteudo do post aqui!</p>" 
+		],
+		"RefPost":"undefined"
 	}
 }
