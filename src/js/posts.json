@@ -1,7 +1,7 @@
 {
 	"post3":{
-		"title":"Modelo de post",
-		"url":"fazer-parte",
+		"title":"Seja o primeiro a fazer um post!",
+		"url":"../fazer-parte",
 		"infoPost":{
 			"Autor":"modelo",
 			"Data":"Desconhecida"
