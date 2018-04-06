@@ -1,0 +1,14 @@
+.tags{
+	margin: 10px 0;
+
+	& .tag{
+		background-color: $color-light-gray;
+		padding: 8px;
+		border-radius: 3px;
+		display: inline-block;
+		margin: 5px;
+		a{
+			padding: 8px;
+		}
+	}
+}

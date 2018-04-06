@@ -33,7 +33,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent; }
 
 body {
-  font-size: 1.2em;
   line-height: 1; }
 
 ol, ul {
@@ -63,32 +62,41 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.text-center {
-  text-align: center; }
-
-.text-right {
-  text-align: right; }
-
-.text-left {
-  text-align: left; }
-
-.jc-center {
-  justify-content: center; }
-
-.jc-between {
-  justify-content: space-between; }
-
 .h1 {
-  font-size: 1.3em; }
+  font-size: 36px; }
+  @media (min-width: 900px) {
+    .h1 {
+      font-size: 48px; } }
 
-.underline {
-  text-decoration: underline; }
+.h2 {
+  font-size: 24px; }
+  @media (min-width: 900px) {
+    .h2 {
+      font-size: 36px; } }
 
-.hide {
-  display: none; }
+.h3 {
+  font-size: 21px; }
+  @media (min-width: 900px) {
+    .h3 {
+      font-size: 24px; } }
 
-.show {
-  display: block; }
+.h4 {
+  font-size: 18px; }
+  @media (min-width: 900px) {
+    .h4 {
+      font-size: 21px; } }
+
+.h5 {
+  font-size: 16px; }
+  @media (min-width: 900px) {
+    .h5 {
+      font-size: 18px; } }
+
+.h6 {
+  font-size: 14px; }
+  @media (min-width: 900px) {
+    .h6 {
+      font-size: 16px; } }
 
 .navbar {
   background-color: #DDDDDD;
@@ -98,7 +106,6 @@ table {
   .navbar h1 {
     display: inline; }
   .navbar .menu {
-    font-size: 1.5em;
     font-weight: bold;
     cursor: pointer; }
   .navbar a {
@@ -119,82 +126,164 @@ table {
     border-radius: 3px; }
 
 .menu {
-  margin: 5px 0; }
+  margin: 5px 0 10px 0; }
   .menu .btn-menu {
-    margin: 2px;
+    margin: 5px 3px;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px;
     color: #fff;
     background-color: #404040;
-    border: 2px solid transparent; }
+    border: 2px solid transparent;
+    transition: all .15s linear; }
+    .menu .btn-menu.active {
+      background-color: transparent;
+      border-color: #404040;
+      color: #404040; }
     .menu .btn-menu:hover {
       background-color: transparent;
       border-color: #404040;
       color: #404040; }
 
-.content-box {
-  width: 100%;
-  margin: 10px 0; }
-  .content-box .itens, .content-box #articles {
-    display: flex;
-    flex-wrap: wrap; }
-    .content-box .itens a, .content-box #articles a {
-      display: inline-block;
-      padding: 10px;
-      margin: 5px;
-      background-color: #DDDDDD;
-      max-width: 120px;
-      width: auto;
-      height: auto;
-      color: #303030;
-      border: 2px solid transparent;
-      word-wrap: break-word;
-      text-align: center;
-      vertical-align: middle; }
-      .content-box .itens a:hover, .content-box #articles a:hover {
-        border-color: #606060; }
+.history {
+  margin: 15px;
+  line-height: 25px; }
+  .history a:hover {
+    text-decoration: underline; }
 
-.post {
-  padding: 0 10px; }
-  .post .post-info, .post .autor-info {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px auto; }
-  .post .info, .post .tag {
+.content {
+  width: 100%;
+  margin: 10px auto;
+  paddin: 0 10px; }
+
+.content-header {
+  margin: 40px 0 0 0; }
+
+.content-body {
+  font-family: 'Merriweather', 'Times New Roman', 'Lucida Bright';
+  color: #606060;
+  margin: 20px auto;
+  padding: 0 10px;
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 1000px;
+  letter-spacing: 1px;
+  line-height: 1.3; }
+  .content-body p {
+    font-size: 1.2em;
+    margin: 0 0 15px 0; }
+    .content-body p a, .content-body p blockquote a {
+      text-decoration: underline; }
+  .content-body blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    border-left: 5px solid #DDDDDD;
+    padding: 10px;
+    margin: 20px auto; }
+
+.content-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px auto; }
+
+.posts-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 0 0; }
+  .posts-wrap a {
+    display: table-cell;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.1em;
+    background-color: #DDDDDD;
+    max-width: 120px;
+    width: auto;
+    height: auto;
+    color: #303030;
+    border: 2px solid transparent;
+    word-wrap: break-word;
+    text-align: center;
+    vertical-align: middle; }
+    .posts-wrap a:hover {
+      border-color: #606060; }
+
+.tags {
+  margin: 10px 0; }
+  .tags .tag {
     background-color: #DDDDDD;
     padding: 8px;
     border-radius: 3px;
     display: inline-block;
     margin: 5px; }
-    .post .info a, .post .tag a {
+    .tags .tag a {
       padding: 8px; }
-  .post header {
-    margin: 30px 0 20px 0; }
-    @media (min-width: 900px) {
-      .post header {
-        font-size: 1.6em; } }
-  .post article {
-    font-family: 'Merriweather', 'Times New Roman', 'Lucida Bright';
-    color: #606060;
-    margin: 20px auto;
-    text-align: justify;
-    text-justify: inter-word;
-    max-width: 1000px;
-    letter-spacing: 1px;
-    line-height: 1.3; }
-    .post article p {
-      font-size: 1.1em;
-      margin: 0 0 15px 0; }
-      .post article p a {
-        text-decoration: underline; }
-  .post .tags {
-    margin: 10px auto; }
 
-blockquote {
-  font-size: 1.1em;
-  font-style: italic;
-  border-left: 5px solid #DDDDDD;
-  padding: 10px;
-  margin: 10px; }
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.jc-center {
+  justify-content: center; }
+
+.jc-between {
+  justify-content: space-between; }
+
+.underline {
+  text-decoration: underline; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.fs-1 {
+  font-size: 1.1em; }
+
+.fs-2 {
+  font-size: 1.2em; }
+
+.fs-3 {
+  font-size: 1.3em; }
+
+.fs-4 {
+  font-size: 1.4em; }
+
+.fs-5 {
+  font-size: 1.5em; }
+
+.mtop-5 {
+  margin-top: 5px; }
+
+.mtop-10 {
+  margin-top: 10px; }
+
+.mtop-15 {
+  margin-top: 15px; }
+
+.mtop-20 {
+  margin-top: 20px; }
+
+.mtop-25 {
+  margin-top: 25px; }
+
+.mtop-30 {
+  margin-top: 30px; }
+
+.mtop-35 {
+  margin-top: 35px; }
+
+.mtop-40 {
+  margin-top: 40px; }
+
+.mtop-45 {
+  margin-top: 45px; }
+
+.mtop-50 {
+  margin-top: 50px; }
 
 /*# sourceMappingURL=liberduc.css.map */

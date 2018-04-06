@@ -1,27 +1,29 @@
-.text-center{
-	text-align: center;
-}
-.text-right{
-	text-align: right;
-}
-.text-left{
-	text-align: left;
-}
-.jc-center{
-	justify-content: center;
-}
-.jc-between{
-	justify-content: space-between;
-}
-.h1{
-	font-size: 1.3em;
-}
-.underline{
-	text-decoration: underline;
-}
-.hide{
-	display: none;
-}
-.show{
-	display: block;
-}
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+.text-left{ text-align: left; }
+
+.jc-center{ justify-content: center; }
+.jc-between{ justify-content: space-between; }
+
+.underline{ text-decoration: underline; }
+
+.hide{ display: none; }
+
+.show{ display: block; }
+
+.fs-1{ font-size: 1.1em; }
+.fs-2{ font-size: 1.2em; }
+.fs-3{ font-size: 1.3em; }
+.fs-4{ font-size: 1.4em; }
+.fs-5{ font-size: 1.5em; }
+
+.mtop-5{ margin-top: 5px; }
+.mtop-10{ margin-top: 10px; }
+.mtop-15{ margin-top: 15px; }
+.mtop-20{ margin-top: 20px; }
+.mtop-25{ margin-top: 25px; }
+.mtop-30{ margin-top: 30px; }
+.mtop-35{ margin-top: 35px; }
+.mtop-40{ margin-top: 40px; }
+.mtop-45{ margin-top: 45px; }
+.mtop-50{ margin-top: 50px; }
