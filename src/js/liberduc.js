@@ -7,6 +7,7 @@ $(document).ready(function(){
 	let dataPost = $('body').attr('data-post');
 	let dataTag = $('body').attr('data-tag');
 	let dataAllTags = $('body').attr('data-all-tags');
+	let dataAllColab = $('body').attr('data-all-colab');
 	let dataColab = $('body').attr('data-colab');
 	let dataMenu = $('[data-menu]').attr('data-menu');
 	let exe = '.html';
@@ -86,11 +87,19 @@ $(document).ready(function(){
 				});
 				$('#posts-by-colab').html(tags);
 			});
-			
-		});
-		
+		});	
 	}
-	
+	if(dataAllColab != undefined){
+
+		$.getJSON(fileJson.equipe, function(itens){			
+			let tags = '';
+			$.each(itens, function(k,item){
+				tags += '<a href="'+path.equipe+item.url+exe+'">'+item.Nome+'</a>';
+			});
+			$('#all-colab').html(tags);
+		});
+	}
+
 	if(dataTag != undefined){
 
 		$.getJSON(fileJson.posts, function(itens){			
