@@ -1,9 +1,9 @@
 {
-	"post3":{
-		"title":"Seja o primeiro a fazer um post!",
+	"post2":{
+		"title":"Saiba como fazer parte",
 		"url":"../fazer-parte",
 		"infoPost":{
-			"Autor":"modelo",
+			"Autor":"Equipe Liberduc",
 			"Data":"Desconhecida"
 		},
 		"tags":{
@@ -13,5 +13,32 @@
 			"<p>Embreve conteudo novo!</p>"
 		],
 		"RefPost":"undefined"
+	},
+	"post1":{
+		"title":"Anatomia do estado Cap.1",
+		"url":"anatomia-do-estado-1",
+		"infoPost":{
+			"Autor":"Kell Moura",
+			"Data":"13/04/18"
+		},
+		"tags":{
+			"Todos os posts":"todos-os-posts",
+			"Resenha":"resenha",
+			"Rothbard":"rothbard"
+		},
+		"content":[
+			"<p><em>Anatomina do estado</em> é um livro de <em>Murray N. Rothbard</em> e tem como objetivo explicar o que verdadeiramente é o estado e trazer ao entendimento a estrutura que nos rodeia e infrige de forma violenta a liberdade de cada individuo.</p>",
+			"<p>Nesse primeiro capítulo Rothbar começa pela percepção que grande parte das pessoas têm do estado. Alguns veem o estado como o ápice da sociedade, outros veem como algo bom e correto, e mesmo que não funcione muito bem é tida como uma organização que busca objetivos sociais, porém o mais comum é que quase todos veem o estado como algo necessário para o bem estar da sociedade e para a vivência humano. E diante dessas visões erradas a respeito do estado, Rothbard dedica esse capitulo a explicar e esclarece o que o estado NÃO É. E o que o estado não? Simples, o estado não é você e você não é o estado, nós não somos o governo, e o governo nenhuma tem a legitimidade de nos representar.</p>",
+			"<p>Falar que \"nós somo os estado\" é uma forma de distorcer a real natureza do estado, e grande parte nem percebe o perigo dessa forma de pensar. Isso assume que se o estado fizer algo contra você, na verdade quem fez isso foi você mesmo, é dizer que quando o estado pega dívida, você tem que pagar com mais impostos porque na verdade o estado somos nós, então nós pegamos essa dívida. Pensar que \"nós somos o governo\" não faz sentindo algum, não é verdade, não torna o estado legítimo e é um perigo para a liberdade dos indivíduos de uma sociedade.</p>",
+			"<p><blockquote>... mesmo que 70% das pessoas decidissem assassinar os restantes 30%, isso ainda assim seria um homicídio em massa e não um suicídio voluntário por parte da minoria chacinada...</blockquote></p>",
+			"<p>No trecho acima Rothbar aponta um problema da democracia. Se democraticamente através de votação, 70% da população resolvesse matar os outros 30%, isso ainda estaria totalmente errado, mesmo que tenha cido decisão de uma maioria por meio do voto. E se 70% votarem para passar uma lei (que se você descumprir, será preso e se resitir a prisão pode ser morto) que obriga a todos, (incluse os 30% que não concordaram) a aceitarem uma tarifa, um imposto a mais, ou a proibição do uso de certos produtos? Hoje isso é visto como algo totalmente normal, quando na verdade é tão incorreto quanto o exemplo citado acima.</p>",
+			"<p>Eu não tenho autoridade sobre você para dizer o que você deve ou não fazer, e tão pouco posso passar esse poder (que eu não tenho) de mandar em você através do meu voto em alguém, que vai fazer uma \"lei\" que todos vão ter que obedecer. O estado não tem nenhuma autoridade legitima para dizer o que você deve ou não fazer!</p>",
+			"<p>No mesmo capítulo Rothbard fala um pouco o que o estado realmente é: <blockquote>Se, então, o estado não somos \"nós\", se ele não é a “família humana” se reunindo para decidir sobre os problemas mútuos, se ele não é uma reunião fraterna ou clube social, o que é afinal? Em poucas palavras, o estado é a organização social que visa a manter o monopólio do uso da força e da violência em uma determinada área</blockquote></p>"
+		],
+		"RefPost":{
+			"Livro completo - PDF":"https://drive.google.com/open?id=12hxq-tF7Hpz6xd98snc2THbgT1aio4sE",
+			"O que o estado não é - Video": "https://www.youtube.com/watch?v=ViybJI1i8l4&index=1",
+			"Mais vídeos sobre o estado":"https://www.youtube.com/watch?v=vb4ZYmz_1nc&list=PLOOFD7pvmPKAnha6W64ZIHTQz6XIof3v3"
+		}
 	}
 }

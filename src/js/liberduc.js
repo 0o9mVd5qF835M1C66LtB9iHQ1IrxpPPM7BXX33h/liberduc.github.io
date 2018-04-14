@@ -65,17 +65,17 @@ $(document).ready(function(){
 			
 			let colabInfo = '';
 			if(itemColab.Email != undefined){
-				colabInfo += '<span class="info"><em>'+itemColab.Email+'</em></span>';
+				colabInfo += '<span class="tag"><em>'+itemColab.Email+'</em></span>';
 			}
 			if(itemColab.Facebook != undefined){
-				colabInfo += '<span class="info"><a href="https://fb.com/'+itemColab.Facebook+'" target="_blanc"><em>Facebook</em></a></span>';
+				colabInfo += '<span class="tag"><a href="https://fb.com/'+itemColab.Facebook+'" target="_blanc"><em>Facebook</em></a></span>';
 			}
 			if(itemColab.Whatsapp != undefined){
-				colabInfo += '<span class="info"><em>'+itemColab.Whatsapp+'</em></span>';
+				colabInfo += '<span class="tag"><em>'+itemColab.Whatsapp+'</em></span>';
 			}
 
 			colabInfo += '';
-			$('.post .post-info').html(colabInfo);
+			$('.content-info').html(colabInfo);
 
 			$.getJSON(fileJson.posts, function(itens){			
 				let tags = '';
