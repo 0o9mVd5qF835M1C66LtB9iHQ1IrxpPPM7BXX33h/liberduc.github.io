@@ -1,6 +1,7 @@
 .tags{
 	margin: 10px 0;
-
+	word-wrap: break-word;
+	
 	& .tag{
 		background-color: $color-light-gray;
 		padding: 8px;

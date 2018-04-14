@@ -170,7 +170,7 @@ table {
   line-height: 1.3; }
   .content-body p {
     font-size: 1.2em;
-    margin: 0 0 15px 0; }
+    margin: 0 0 25px 0; }
     .content-body p a, .content-body p blockquote a {
       text-decoration: underline; }
   .content-body blockquote {
@@ -207,7 +207,8 @@ table {
       border-color: #606060; }
 
 .tags {
-  margin: 10px 0; }
+  margin: 10px 0;
+  word-wrap: break-word; }
   .tags .tag {
     background-color: #DDDDDD;
     padding: 8px;
