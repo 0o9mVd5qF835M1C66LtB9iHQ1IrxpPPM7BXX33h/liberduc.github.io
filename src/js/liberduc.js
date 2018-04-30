@@ -97,7 +97,7 @@ $(document).ready(function(){
 		$.getJSON(fileJson.equipe, function(itens){			
 			let tags = '';
 			$.each(itens, function(k,item){
-				tags += '<a href="'+path.equipe+item.url+exe+'">'+item.Nome+'</a>';
+				tags += '<a href="'+path.equipe+item.url+'">'+item.Nome+'</a>';
 			});
 			$('#all-colab').html(tags);
 		});
@@ -166,8 +166,9 @@ $(document).ready(function(){
 			let postInfo = '';
 			$.each(infoPost, function(k, ip){
 				if(k === 'Autor'){
-					let href = ip.toLowerCase().replace(' ', '-');
-					postInfo += '<span class="tag">'+k+':<a href="'+path.equipe+href+exe+'"><em>'+ip+'</em></a></span>';
+					let href = ip.toLowerCase().replace(' ', '');
+					console.log(href);
+					postInfo += '<span class="tag">'+k+':<a href="'+path.equipe+href+'"><em>'+ip+'</em></a></span>';
 				}
 				else{
 					postInfo += '<span class="tag">'+k+': <em>'+ip+'</em></span>';
