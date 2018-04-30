@@ -67,6 +67,9 @@ $(document).ready(function(){
 			if(itemColab.Email != undefined){
 				colabInfo += '<span class="tag"><em>'+itemColab.Email+'</em></span>';
 			}
+			if(itemColab.Instagram != undefined){
+				colabInfo += '<span class="tag"><a href="https://instagram.com/'+itemColab.Instagram+'" target="_blanc"><em>Instagram</em></a></span>';
+			}
 			if(itemColab.Facebook != undefined){
 				colabInfo += '<span class="tag"><a href="https://fb.com/'+itemColab.Facebook+'" target="_blanc"><em>Facebook</em></a></span>';
 			}
